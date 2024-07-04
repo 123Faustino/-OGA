@@ -104,29 +104,14 @@ $icons = new \Feather\IconManager();
 
                             </div>
 
-                            <nav class="mb-2 nav">
-                                <li class="nav-item">
-                                    <a class="mx-1 nav-link btn btn-info" onclick="toggle_email_and_phone_fields('email','Your Email Address')">Email</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="mx-1 nav-link btn btn-info" onclick="toggle_email_and_phone_fields('tel','Your Phone Number')">Phone</a>
-                                </li>
-                            </nav>
+
 
                             <div class="mb-3 form-group icon-input">
                                 <i class="font-sm text-grey-500 pe-0" style="margin-top: -10px">{!! $icons->getIcon('user') !!}</i>
                                 <input type="email" id="email" required name="email" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" placeholder="Your Email Address">
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                                <x-input-error :messages="$errors->get('tel')" class="mt-2" />
 
-                                <script>
-                                    function toggle_email_and_phone_fields(input_type, place_holder) {
-                                        var element = document.querySelector("#email")
-                                        element.type = input_type
-                                        element.name = input_type
-                                        element.placeholder = place_holder
-                                    }
-                                </script>
+
                             </div>
 
                             <div class="mb-3 custom-file form-group">

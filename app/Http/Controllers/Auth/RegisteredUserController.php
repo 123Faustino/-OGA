@@ -52,8 +52,8 @@ class RegisteredUserController extends Controller
             'usernmae' => $request->usernmae,
             'gender' => $request->gender ?? "",
             'profile' => $profile ?? "",
-            'email' => $request->email,
-            'mobile' => $request->tel ?? "",
+            'email' => $request->email ?? "",
+            'mobile' => $request->tel ?? Str::uuid(),
             'password' => Hash::make($request->password),
             'relationship' => "single"
         ]);
