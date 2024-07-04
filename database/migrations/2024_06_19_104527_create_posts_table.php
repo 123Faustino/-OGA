@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->uuid("uuid");
             $table->foreignId("user_id")->constrained()->cascadeOnDelete();
             $table->longText("content");
-            $table->enum("status",["published","private"])->default("published");
+            $table->enum("status", ["published", "private"])->default("published");
             $table->unsignedBigInteger("likes")->default(0);
             $table->unsignedBigInteger("comments")->default(0);
             $table->boolean("is_page_post")->default(0);
-            $table->foreignId("page_id")->nuulable()->constrained()->cascadeOnDelete();
+            $table->foreignId("page_id")->nullable()->constrained()->cascadeOnDelete();
             $table->boolean("is_group_post")->default(0);
-            $table->foreignId("group_id")->nuulable()->constrained()->cascadeOnDelete();
-            $table->softDeletes(); 
+            $table->foreignId("group_id")->nullable()->constrained()->cascadeOnDelete();
+            $table->softDeletes();
             $table->timestamps();
-
         });
     }
 
