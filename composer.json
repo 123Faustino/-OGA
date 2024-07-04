@@ -1,0 +1,5 @@
+{
+    "require": {
+        "pixelrobin/php-feather": "^2.0"
+    }
+}

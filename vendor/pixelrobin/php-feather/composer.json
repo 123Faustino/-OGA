@@ -1,0 +1,48 @@
+{
+    "name": "pixelrobin/php-feather",
+    "type": "library",
+    "description": "PHP library for feather icons",
+    "keywords": [
+        "feather",
+        "icons",
+        "svg",
+        "pixelrobin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Savchuk",
+            "email": "pixelrobin@hotmail.com"
+        },
+        {
+            "name": "Nate Wiebe",
+            "email": "nate@northern.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Feather\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-simplexml": "*",
+        "phpunit/phpunit": "^9.5",
+        "npm-asset/feather-icons": ">=4.28"
+    },
+    "scripts": {
+        "build": "bin/build",
+        "test": "phpunit --verbose tests"
+    }
+}
